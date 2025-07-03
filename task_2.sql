@@ -17,8 +17,8 @@ CREATE TABLE Books (
 
 CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE,
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215) UNIQUE,
     phone VARCHAR(20),
     address TEXT
 );
@@ -36,4 +36,5 @@ CREATE TABLE Order_Details (
     book_id INT,
     quantity INT,
     price DECIMAL(10, 2),
-    FOREIGN KEY (order_id) REFERENCES O_
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES_
